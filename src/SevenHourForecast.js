@@ -5,7 +5,12 @@ import './SevenHourForecast.css';
 const SevenHourForecast = () => {
 
     return (
-      <div>hello</div>
+      <div>
+        props
+        // the hour
+        // an image that reflects the weather
+        // the projected temperature
+      </div>
       
     )
 }
