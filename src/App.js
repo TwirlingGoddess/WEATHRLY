@@ -8,6 +8,9 @@ import Card from './Card.js';
 import './App.css';
 import { key } from './Api.js'
 
+
+// const URL = 'http:/weather/${key}/...'
+
 class App extends Component {
   render() {
     return (
@@ -18,6 +21,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 export default App;
