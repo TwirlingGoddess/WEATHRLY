@@ -6,6 +6,7 @@ import SevenHourForecast from './SevenHourForecast.js';
 // import TenDayForecast from '.TenDayForecast.js';
 import Card from './Card.js';
 import './App.css';
+import { key } from './Api.js'
 
 class App extends Component {
   render() {
