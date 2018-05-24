@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
-import SevenHourForecast from './SevenHourForecast.js';
+import React from 'react';
+// import SevenHourForecast from './SevenHourForecast.js';
 // import TenDayForecast from './TenDayForecast.js';
 import './Card.css';
 
-class Card extends Component {
-  constructor() {
-    super();
-  }
 
-  render() {
-    return(
-      <div>hello</div>
-      
+const Card = props => {
+
+    return (
+      <div>
+      <h1>{props.date}</h1>
+      <h2>{props.id}</h2>
+      </div>
     )
-    
-  }
 }
 
 export default Card;

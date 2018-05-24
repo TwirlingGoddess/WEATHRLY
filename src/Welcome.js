@@ -4,7 +4,6 @@ import './Welcome.css';
 
 const Welcome = () => {
 
-    
     return(
       <div>hello</div>
       
