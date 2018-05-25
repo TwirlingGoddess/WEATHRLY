@@ -42,6 +42,8 @@ class App extends Component {
         <div className="TenDayForecast">
           <TenDayForecast 
           forecast={this.state.tenDayForecast}/>
+          <SevenHourForecast
+          forecast={this.state.sevenHourForecast}/>
         </div>
       </div>
     );
