@@ -5,13 +5,15 @@ import './TenDayForecast.css';
 // import { mockData } from './mockData.js';
 
 const TenDayForecast = (props) => {
-
   return (
-  <div>
-      {props.props.forecast.simpleforecast.forecastday.map((date, index) => {
-        return <Card day={date} id={index} />
-      })}
-  </div>
+    props.forecast.map((day, index) => {
+      return  <Card 
+      day={day.dayOfWeek}
+      high={day.low}
+      low={day.low}
+      key={index}
+      />
+    })
   )
 }
 
