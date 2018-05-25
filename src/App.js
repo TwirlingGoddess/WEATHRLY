@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import CurrentWeather from './CurrentWeather.js';
 import SevenHourForecast from './SevenHourForecast.js';
 import TenDayForecast from './TenDayForecast.js';
+<<<<<<< HEAD
 import tenDayCleaner from './tenDayCleaner.js';
 import sevenHourCleaner from './sevenHourCleaner.js';
 import './App.css';
@@ -13,17 +14,26 @@ import { mockData } from './mockData.js';
 
 // const URL = 'http:/weather/${key}/...'
 
+=======
+import tenDayDataCleaner from './tenDayDataCleaner.js';
+import './App.css';
+import { mockData } from './mockData.js';
+import sevenHourDataCleaner from './sevenHourDataCleaner.js';
+>>>>>>> 52b3cb83462a5e58b9e1aea2b6842486e9a9df2d
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      tenDayForecast: []
+      tenDayForecast: [],
+      sevenHourForecast: []
     }
   }
 
   componentDidMount() {
-    this.setState({ tenDayForecast: tenDayCleaner(mockData) })
-    this.setState({ sevenHourForecast: sevenHourCleaner(mockData) })
+    this.setState({
+      tenDayForecast: tenDayDataCleaner(mockData),
+      sevenHourForecast: sevenHourDataCleaner(mockData)
+    })
   };
   
   render() {
@@ -42,10 +52,11 @@ class App extends Component {
         <div className="TenDayForecast">
           <TenDayForecast 
           forecast={this.state.tenDayForecast}/>
+        </div>
+        <div className="SevenHourForecast">
           <SevenHourForecast
           forecast={this.state.sevenHourForecast}/>
         </div>
-      </div>
     );
   }
 

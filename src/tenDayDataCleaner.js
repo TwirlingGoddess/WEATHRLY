@@ -1,6 +1,6 @@
 import React from 'react';
 
-const tenDayCleaner = (data) => {
+const tenDayDataCleaner = (data) => {
   const tenDayArray = []
 
   data.forecast.simpleforecast.forecastday.forEach(forecast => {
@@ -12,4 +12,4 @@ const tenDayCleaner = (data) => {
   })
   return tenDayArray;
 }
-export default tenDayCleaner;
+export default tenDayDataCleaner;
