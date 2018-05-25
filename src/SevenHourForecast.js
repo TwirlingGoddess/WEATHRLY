@@ -1,18 +1,19 @@
 import React from 'react';
-import App from './App.js';
+import Card from './Card.js';
 import './SevenHourForecast.css';
 
-const SevenHourForecast = () => {
-
-    return (
-      <div>
-        props
-        // the hour
-        // an image that reflects the weather
-        // the projected temperature
-      </div>
-      
-    )
+const SevenHourForecast = (props) => {
+  return (
+    props.forecast.map((hour, index) => {
+      return <Card
+        hour={hour.hour}
+        temp={hour.temp}
+        key={index}
+      />
+    })
+  )
 }
+
+
 
 export default SevenHourForecast;
