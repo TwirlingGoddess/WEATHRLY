@@ -7,10 +7,11 @@ import './Card.css';
 const Card = props => {
 
     return (
-      <div>
-      <h1>{props.date}</h1>
-      <h2>{props.id}</h2>
-      </div>
+      <section>
+      <h1>{props.day}</h1>
+      <h1>low: {props.low}</h1>
+      <h1>High: {props.high}</h1>
+      </section>
     )
 }
 
