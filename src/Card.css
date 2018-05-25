@@ -1,0 +1,14 @@
+.Card {
+  display: inline;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: .1rem dashed powderblue;
+}
+
+.Card img {
+  width: 100%;
+  height: 5rem;
+  background-image: url('mockImage.jpg');
+}

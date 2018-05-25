@@ -1,15 +1,15 @@
 import React from 'react';
 
-const tenDayCleaner = (data) => {
-  const tenDayArray = []
+const sevenHourCleaner = (data) => {
+  const sevenHourArray = []
 
   data.forecast.simpleforecast.forecastday.forEach(forecast => {
-    tenDayArray.push({
+    sevenHourArray.push({
       dayOfWeek: forecast.date.weekday,
       high: forecast.high.fahrenheit ,
       low: forecast.low.fahrenheit
     })
   })
-  return tenDayArray;
+  return sevenHourArray;
 }
-export default tenDayCleaner;
+export default sevenHourCleaner;

@@ -7,7 +7,7 @@ import './Card.css';
 const Card = props => {
 
     return (
-      <section>
+      <section className='Card'>
       <h1>{props.day}</h1>
       <h1>low: {props.low}</h1>
       <h1>High: {props.high}</h1>
