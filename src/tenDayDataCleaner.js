@@ -3,6 +3,7 @@ const tenDayDataCleaner = (data) => {
 
   data.forecast.simpleforecast.forecastday.forEach(forecast => {
     tenDayArray.push({
+      
       dayOfWeek: forecast.date.weekday,
       high: forecast.high.fahrenheit ,
       low: forecast.low.fahrenheit
