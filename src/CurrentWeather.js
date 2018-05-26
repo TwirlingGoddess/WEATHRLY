@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from './Card.js';
 import './CurrentWeather.css';
 
 const CurrentWeather = (props) => {
