@@ -1,5 +1,3 @@
-import React from 'react';
-
 const tenDayDataCleaner = (data) => {
   const tenDayArray = []
 
