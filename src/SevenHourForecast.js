@@ -5,11 +5,12 @@ import './SevenHourForecast.css';
 const SevenHourForecast = (props) => {
   return (
     props.forecast.map((hour, index) => {
-      return <Card
+      return(
+        <Card
         hour={hour.hour}
         temp={hour.temp}
         key={index}
-      />
+      />)
     })
   )
 }
