@@ -1,0 +1,12 @@
+.TenDayForecast {
+  display: flex;
+  justify-content: space-around;
+  border: .2rem solid pink;
+  transition-duration: 3s;
+
+}
+
+.TenDayForecast:hover {
+  background-color: red;
+  /*transform: ;*/
+}

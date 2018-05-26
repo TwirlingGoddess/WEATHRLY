@@ -1,15 +1,15 @@
 import React from 'react';
 
 const sevenHourDataCleaner = (data) => {
-  const sevenHourDataCleaner = []
+  const sevenHourDataArray = []
 
   data.hourly_forecast.splice(1,7).forEach(forecast => {
 
-    sevenHourDataCleaner.push({
+    sevenHourDataArray.push({
       hour: forecast.FCTTIME.civil,
       temp: forecast.temp.english
     })
   })
-  return sevenHourDataCleaner;
+  return sevenHourDataArray;
 }
 export default sevenHourDataCleaner;

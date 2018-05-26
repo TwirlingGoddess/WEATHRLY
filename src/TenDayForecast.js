@@ -5,12 +5,13 @@ import './TenDayForecast.css';
 const TenDayForecast = (props) => {
   return (
     props.forecast.map((day, index) => {
-      return  <Card 
-      day={day.dayOfWeek}
-      high={day.low}
-      low={day.low}
-      key={index}
-      />
+      return(
+        <Card 
+          day={day.dayOfWeek}
+          high={day.high}
+          low={day.low}
+          key={index}
+        />)
     })
   )
 }

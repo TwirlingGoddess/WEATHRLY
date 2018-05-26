@@ -1,0 +1,13 @@
+.SevenHourForecast {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  border: .2rem solid pink;
+  transition-duration: 3s;
+
+}
+
+.SevenHourForecast:hover {
+  background-color: orange;
+  /*transform: ;*/
+}
