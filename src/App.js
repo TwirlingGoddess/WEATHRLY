@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Search from './Search.js';
+import Search from './Search.js';
 // import Welcome from './Welcome.js';
 import CurrentWeather from './CurrentWeather.js';
 import currentDataCleaner from './currentDataCleaner.js';
@@ -22,8 +22,10 @@ class App extends Component {
     this.state = {
       tenDayForecast: [],
       sevenHourForecast: [],
-      currentWeather: []
+      currentWeather: [],
+      cityStateZip: ''
     }
+    this.searchValues = this.searchValues.bind(this);
   }
 
   componentDidMount() {
@@ -33,6 +35,13 @@ class App extends Component {
       currentWeather: currentDataCleaner(mockData)
     })
   };
+
+  searchValues(filter) {
+    this.setState({
+      cityStateZip: filter.inputValue
+    })
+
+  }
   
   render() {
     return (
@@ -45,6 +54,7 @@ class App extends Component {
           forecast={this.state.currentWeather}/>
         <h1>10 Day Forecast</h1>
         <div className="TenDayForecast">
+          <Search searchValues={this.searchValues}/>
           <TenDayForecast 
           forecast={this.state.tenDayForecast}/>
         </div>
