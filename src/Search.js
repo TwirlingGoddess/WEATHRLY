@@ -12,9 +12,7 @@ class Search extends Component {
 
   onSubmit(event) {
     event.preventDefault();
-    console.log(this.props.searchValues(this.state));
-    // this.props.searchValues(this.state)
-
+    this.props.getWeather(this.state.inputValue);
   }
 
   updateState(event) {
