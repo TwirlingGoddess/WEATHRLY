@@ -24,21 +24,30 @@ class App extends Component {
   setLocalStorage() {
     const current = JSON.stringify(this.state.currentWeather);
     localStorage.setItem('current', current);
-        // const stringifiedObj = JSON.stringify(data);
-        // localStorage.setItem('weather', stringifiedObj);
+
+    const sevenHour = JSON.stringify(this.state.sevenHourForecast);
+    localStorage.setItem('sevenHour', sevenHour);
+
+    const tenDay = JSON.stringify(this.state.tenDayForecast);
+    localStorage.setItem('tenDay', tenDay);
   }
 
   pullFromStorage() {
-    const string = localStorage.getItem('current');
-    const current = JSON.parse(string);
+    const current = JSON.parse(localStorage.getItem('current'));
+    const sevenHour = JSON.parse(localStorage.getItem('sevenHour'));
+    const tenDay = JSON.parse(localStorage.getItem('tenDay'));
 
-    this.setState({currentWeather: current});
+    this.setState({
+      currentWeather: current,
+      sevenHourForecast: sevenHour,
+      tenDayForecast: tenDay
+    });
 
     }
 
-    componentDidMount() {
-      this.pullFromStorage();
-    };
+    // componentDidMount() {
+    //   this.pullFromStorage();
+    // };
   
   getWeather(city, state) {
     fetch(`http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/${state}/${city}.json`)
@@ -59,7 +68,7 @@ class App extends Component {
 
 
   render() {
-//at some point you pull from local then you setState 
+
     return (
       <div className="App">
         <header className="App-header">
