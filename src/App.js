@@ -31,10 +31,11 @@ class App extends Component {
           currentWeather: currentDataCleaner(data)
         })
       })
-      .catch(err => "al;skdjflaskdfj")
+      .catch(err => alert("please enter valid city and state"))
   }
 
   render() {
+
     return (
       <div className="App">
         <header className="App-header">
