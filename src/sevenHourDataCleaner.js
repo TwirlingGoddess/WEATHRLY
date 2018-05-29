@@ -1,4 +1,6 @@
 const sevenHourDataCleaner = (data) => {
+  console.log(data);
+  
   const sevenHourDataArray = []
 
   data.hourly_forecast.splice(1,7).forEach(forecast => {

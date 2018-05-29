@@ -8,14 +8,8 @@ import sevenHourDataCleaner from './sevenHourDataCleaner.js';
 import TenDayForecast from './TenDayForecast.js';
 import tenDayDataCleaner from './tenDayDataCleaner.js';
 import './App.css';
-import { mockData } from './mockData.js';
-// import { key } from './key.js'
-// const URL = 'http:/weather/${key}/...'
-
-
-
-
-
+// import { mockData } from './mockData.js';
+import { key } from './key.js'
 class App extends Component {
   constructor() {
     super()
@@ -25,24 +19,22 @@ class App extends Component {
       currentWeather: [],
       cityStateZip: ''
     }
-    this.searchValues = this.searchValues.bind(this);
+    this.getWeather = this.getWeather.bind(this);
   }
 
-  componentDidMount() {
-    this.setState({
-      tenDayForecast: tenDayDataCleaner(mockData),
-      sevenHourForecast: sevenHourDataCleaner(mockData),
-      currentWeather: currentDataCleaner(mockData)
-    })
-  };
-
-  searchValues(filter) {
-    this.setState({
-      cityStateZip: filter.inputValue
-    })
-
+  getWeather(location) {
+    fetch(`http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/CA/${location}.json`)
+      .then(data => data.json())
+      .then(data => {
+        this.setState({
+          tenDayForecast: tenDayDataCleaner(data),
+          sevenHourForecast: sevenHourDataCleaner(data),
+          currentWeather: currentDataCleaner(data)
+        })
+      })
+      .catch(err => "al;skdjflaskdfj")
   }
-  
+
   render() {
     return (
       <div className="App">
@@ -54,7 +46,7 @@ class App extends Component {
           forecast={this.state.currentWeather}/>
         <h1>10 Day Forecast</h1>
         <div className="TenDayForecast">
-          <Search searchValues={this.searchValues}/>
+          <Search getWeather={this.getWeather}/>
           <TenDayForecast 
           forecast={this.state.tenDayForecast}/>
         </div>
