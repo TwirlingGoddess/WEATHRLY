@@ -3,10 +3,12 @@
   justify-content: space-around;
   border: .2rem solid pink;
   transition-duration: 3s;
+  width: 880rem;
+  overflow: scroll;
 
 }
 
 .TenDayForecast:hover {
   background-color: red;
-  /*transform: ;*/
+  width: 90rem;
 }

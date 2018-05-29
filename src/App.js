@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import Search from './Search.js';
-// import Welcome from './Welcome.js';
+import Welcome from './Welcome.js';
 import CurrentWeather from './CurrentWeather.js';
 import currentDataCleaner from './currentDataCleaner.js';
 import SevenHourForecast from './SevenHourForecast.js';
@@ -38,7 +38,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Weatherly</h1>
+          <Welcome/>
         </header>
         <h1>Current Weather</h1>
         <CurrentWeather
