@@ -21,9 +21,40 @@ class App extends Component {
     this.getWeather = this.getWeather.bind(this);
   }
 
+  setLocalStorage() {
+    const current = JSON.stringify(this.state.currentWeather);
+    localStorage.setItem('current', current);
+
+    const sevenHour = JSON.stringify(this.state.sevenHourForecast);
+    localStorage.setItem('sevenHour', sevenHour);
+
+    const tenDay = JSON.stringify(this.state.tenDayForecast);
+    localStorage.setItem('tenDay', tenDay);
+  }
+
+  pullFromStorage() {
+    const current = JSON.parse(localStorage.getItem('current'));
+    const sevenHour = JSON.parse(localStorage.getItem('sevenHour'));
+    const tenDay = JSON.parse(localStorage.getItem('tenDay'));
+
+    this.setState({
+      currentWeather: current,
+      sevenHourForecast: sevenHour,
+      tenDayForecast: tenDay
+    });
+
+    }
+
+    // componentDidMount() {
+    //   this.pullFromStorage();
+    // };
+  
   getWeather(city, state) {
     fetch(`http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/${state}/${city}.json`)
-      .then(data => data.json())
+      .then(data => 
+        data.json()
+
+      )
       .then(data => {
         this.setState({
           tenDayForecast: tenDayDataCleaner(data),
@@ -31,8 +62,10 @@ class App extends Component {
           currentWeather: currentDataCleaner(data)
         })
       })
+      .then(data => this.setLocalStorage())
       .catch(err => alert("please enter valid city and state"))
   }
+
 
   render() {
 
