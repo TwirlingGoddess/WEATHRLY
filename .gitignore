@@ -21,4 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # key
-src/key.js
+src/Key.js
