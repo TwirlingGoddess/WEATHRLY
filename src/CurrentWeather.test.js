@@ -11,4 +11,12 @@ describe('CurrentWeather', function () {
   beforeEach(() => {
     currentWeather = new CurrentWeather();
   });
+
+  it('should take a single argument of props', () => {
+    expect(.......).toBe(........)
+  })
+
+  it('should return a single element in this component', () => {
+    expect(card.length).toBe(1)
+  }); 
 })
