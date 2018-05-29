@@ -1,5 +1,4 @@
 const sevenHourDataCleaner = (data) => {
-  console.log(data);
   
   const sevenHourDataArray = []
 
