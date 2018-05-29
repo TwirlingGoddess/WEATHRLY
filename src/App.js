@@ -8,8 +8,7 @@ import sevenHourDataCleaner from './sevenHourDataCleaner.js';
 import TenDayForecast from './TenDayForecast.js';
 import tenDayDataCleaner from './tenDayDataCleaner.js';
 import './App.css';
-// import { mockData } from './mockData.js';
-import { key } from './key.js'
+import { key } from './Key.js'
 class App extends Component {
   constructor() {
     super()
@@ -22,8 +21,8 @@ class App extends Component {
     this.getWeather = this.getWeather.bind(this);
   }
 
-  getWeather(location) {
-    fetch(`http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/CA/${location}.json`)
+  getWeather(city, state) {
+    fetch(`http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/${state}/${city}.json`)
       .then(data => data.json())
       .then(data => {
         this.setState({

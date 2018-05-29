@@ -12,7 +12,10 @@ class Search extends Component {
 
   onSubmit(event) {
     event.preventDefault();
-    this.props.getWeather(this.state.inputValue);
+    const splitCityState = this.state.inputValue.split(',');
+    const city = splitCityState[0];
+    const state = splitCityState[1]
+    this.props.getWeather(city, state);
   }
 
   updateState(event) {
