@@ -13,10 +13,9 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      tenDayForecast: [],
-      sevenHourForecast: [],
-      currentWeather: [],
-      cityStateZip: ''
+      tenDayForecast: [] || null,
+      sevenHourForecast: [] || null,
+      currentWeather: [] || null,
     }
     this.getWeather = this.getWeather.bind(this);
   }
@@ -68,7 +67,8 @@ class App extends Component {
 
 
   render() {
-
+    if(this.state.sevenHourForecast.length > 0) {
+      console.log('asdfasdf');
     return (
       <div className="App">
         <header className="App-header">
@@ -90,6 +90,12 @@ class App extends Component {
         </div>
       </div>
     );
+    } else {
+      console.log('landing');
+      return (
+        <Search getWeather={this.getWeather} />
+      )
+    }
   }
 }
 
