@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import Search from './Search.js';
 import Welcome from './Welcome.js';
+import Search from './Search.js';
 import CurrentWeather from './CurrentWeather.js';
 import currentDataCleaner from './currentDataCleaner.js';
 import SevenHourForecast from './SevenHourForecast.js';
@@ -8,33 +8,34 @@ import sevenHourDataCleaner from './sevenHourDataCleaner.js';
 import TenDayForecast from './TenDayForecast.js';
 import tenDayDataCleaner from './tenDayDataCleaner.js';
 import './App.css';
-import { mockData } from './mockData.js';
-// import { key } from './key.js'
-// const URL = 'http:/weather/${key}/...'
-
-
-
-
-
+import { key } from './Key.js'
 class App extends Component {
   constructor() {
     super()
     this.state = {
       tenDayForecast: [],
       sevenHourForecast: [],
-      currentWeather: []
+      currentWeather: [],
+      cityStateZip: ''
     }
+    this.getWeather = this.getWeather.bind(this);
   }
 
-  componentDidMount() {
-    this.setState({
-      tenDayForecast: tenDayDataCleaner(mockData),
-      sevenHourForecast: sevenHourDataCleaner(mockData),
-      currentWeather: currentDataCleaner(mockData)
-    })
-  };
-  
+  getWeather(city, state) {
+    fetch(`http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/${state}/${city}.json`)
+      .then(data => data.json())
+      .then(data => {
+        this.setState({
+          tenDayForecast: tenDayDataCleaner(data),
+          sevenHourForecast: sevenHourDataCleaner(data),
+          currentWeather: currentDataCleaner(data)
+        })
+      })
+      .catch(err => alert("please enter valid city and state"))
+  }
+
   render() {
+
     return (
       <div className="App">
         <header className="App-header">
@@ -45,6 +46,7 @@ class App extends Component {
           forecast={this.state.currentWeather}/>
         <h1>10 Day Forecast</h1>
         <div className="TenDayForecast">
+          <Search getWeather={this.getWeather}/>
           <TenDayForecast 
           forecast={this.state.tenDayForecast}/>
         </div>
