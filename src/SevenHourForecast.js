@@ -3,8 +3,7 @@ import Card from './Card.js';
 import './SevenHourForecast.css';
 
 const SevenHourForecast = (props) => {
-  return (
-    props.forecast.map((hour, index) => {
+    const renderedCards = props.forecast.map((hour, index) => {
       return(
         <Card
         hour={hour.hour}
@@ -12,7 +11,12 @@ const SevenHourForecast = (props) => {
         key={index}
       />)
     })
-  )
+
+    return (
+      <div>
+        { renderedCards }
+      </div>
+    )
 }
 
 

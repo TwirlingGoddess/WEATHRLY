@@ -3,6 +3,7 @@ import './Card.css';
 
 
 const Card = (props) => {
+  
     if (props.day) {
       return (
         <section className='Card'>

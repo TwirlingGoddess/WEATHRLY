@@ -3,8 +3,7 @@ import Card from './Card.js';
 import './TenDayForecast.css';
 
 const TenDayForecast = (props) => {
-  return (
-    props.forecast.map((day, index) => {
+   const renderedCards =  props.forecast.map((day, index) => {
       return(
         <Card 
           day={day.dayOfWeek}
@@ -13,7 +12,12 @@ const TenDayForecast = (props) => {
           key={index}
         />)
     })
-  )
+
+    return(
+      <div>
+        { renderedCards }
+      </div>
+    )
 }
 
 
