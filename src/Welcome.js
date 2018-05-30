@@ -5,8 +5,10 @@ import './Welcome.css';
 const Welcome = () => {
 
     return(
-      <div>hello</div>
-      
+      <div className = "Welcome">
+        <h1> Welcome to WeathRly </h1>
+        <h2> ....where the weather is </h2>
+      </div>      
     )
 }
 

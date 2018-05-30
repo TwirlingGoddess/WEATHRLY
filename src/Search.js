@@ -26,9 +26,10 @@ class Search extends Component {
 
   render(){
     return(
-      <div>
-        <input type="text" placeholder="enter city or zip-code here" value={this.state.inputValue} onChange={event => this.updateState(event)}/>
-      <button onClick={this.onSubmit}>Enter</button>
+      <div className={this.props.cssSize}>
+        <input type="text" placeholder="Enter city & state (York, PA), or Zipcode" 
+          value={this.state.inputValue} onChange={event => this.updateState(event)}/>
+        <button onClick={this.onSubmit}>Enter</button>
       </div>
     )
   }

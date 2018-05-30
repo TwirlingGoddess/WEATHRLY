@@ -11,4 +11,8 @@ describe('Weather', function () {
   beforeEach(() => {
     weather = new Weather();
   });
+
+  // it should have a greeting
+
+  // it should disappear once city is submitted
 })
