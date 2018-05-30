@@ -1,15 +1,20 @@
 .SevenHourForecast {
   display: flex;
   align-content: center;
-  justify-content: space-around;
-  border: .2rem solid pink;
-  transition-duration: 3s;
-  width: 635rem;
-  overflow: scroll;
-
+  justify-content: space-between;  
+  animation-duration: 20s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
 }
 
-.SevenHourForecast:hover {
-  background-color: orange;
-  width: 90rem;
+@keyframes slidein {
+  from {
+    margin-left: 90%;
+    width: 100%; 
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+
 }

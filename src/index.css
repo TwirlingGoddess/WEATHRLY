@@ -1,5 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'railway', sans-serif;
+  background-color: powderblue;
+  text-shadow: .25rem .25rem .25rem gold;
 }

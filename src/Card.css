@@ -4,11 +4,16 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: .1rem dashed powderblue;
+  box-shadow: .5rem .5rem 2rem lightpink; 
+  margin: 2rem;
+  border-radius: 9000rem
+}
+
+.Card:hover {
+  box-shadow: .5rem .5rem 2rem chartreuse; 
 }
 
 .Card img {
   width: 100%;
   height: 5rem;
-  background-image: url('mockImage.jpg');
 }
