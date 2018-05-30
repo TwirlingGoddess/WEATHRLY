@@ -39,24 +39,22 @@ class App extends Component {
     const sevenHour = JSON.parse(localStorage.getItem('sevenHour'));
     const tenDay = JSON.parse(localStorage.getItem('tenDay'));
 
-    this.setState({
-      currentWeather: current,
-      sevenHourForecast: sevenHour,
-      tenDayForecast: tenDay
-    });
-
+      this.setState({
+        currentWeather: current,
+        sevenHourForecast: sevenHour,
+        tenDayForecast: tenDay
+      });
     }
 
     componentDidMount() {
-      this.pullFromStorage();
+      if(localStorage.length > 0) {
+        this.pullFromStorage();
+      }
     };
   
   getWeather(city, state) {
     fetch(`http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/${state}/${city}.json`)
-      .then(data => 
-        data.json()
-
-      )
+      .then(data => data.json())
       .then(data => {
         this.setState({
           tenDayForecast: tenDayDataCleaner(data),
