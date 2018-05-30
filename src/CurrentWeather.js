@@ -4,12 +4,12 @@ import './CurrentWeather.css';
 const CurrentWeather = (props) => {
       return (
         <section className="CurrentWeather">
-          <h1>{props.forecast.name}</h1>
-          <h2>Current Conditions: {props.forecast.conditions}</h2>
-          <h2>Day: {props.forecast.dayOfWeek}</h2>
-          <h2>Current Temp: {props.forecast.currentTemperature}°</h2>
-          <h2>High: {props.forecast.expectedHigh}°</h2>
-          <h2>Low: {props.forecast.expectedLow}°</h2>
+          <h1 className='city'>{props.forecast.name}</h1>
+          <h2 className='conditions'>{props.forecast.conditions}</h2>
+          <h3 className='day'>{props.forecast.dayOfWeek}</h3>
+          <p className='current'>{props.forecast.currentTemperature}°</p>
+          <p className='high'>High {props.forecast.expectedHigh}°</p>
+          <p className='low'>Low {props.forecast.expectedLow}°</p>
         </section>
       )
 }

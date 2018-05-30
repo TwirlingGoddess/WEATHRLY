@@ -24,7 +24,7 @@ class Search extends Component {
     })
   }
 
-  render(){
+  render() {
     return(
       <div className={this.props.cssSize}>
         <input type="text" placeholder="Enter city & state (York, PA), or Zipcode" 
