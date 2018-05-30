@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import Welcome from './Welcome.js';
 import Search from './Search.js';
-// import Welcome from './Welcome.js';
 import CurrentWeather from './CurrentWeather.js';
 import currentDataCleaner from './currentDataCleaner.js';
 import SevenHourForecast from './SevenHourForecast.js';
@@ -8,7 +8,8 @@ import sevenHourDataCleaner from './sevenHourDataCleaner.js';
 import TenDayForecast from './TenDayForecast.js';
 import tenDayDataCleaner from './tenDayDataCleaner.js';
 import './App.css';
-import { key } from './Key.js'
+import { key } from './Key.js';
+
 class App extends Component {
   constructor() {
     super()
@@ -18,6 +19,8 @@ class App extends Component {
       currentWeather: [] || null,
     }
     this.getWeather = this.getWeather.bind(this);
+    this.showSevenHour = this.showSevenHour.bind(this);
+    this.showTenDay = this.showTenDay.bind(this);
   }
 
   setLocalStorage() {
@@ -63,34 +66,66 @@ class App extends Component {
       .catch(err => alert("please enter valid city and state"))
   }
 
+  showSevenHour() {
+    const hideTen = document.querySelector('.TenDayForecast');
+    if(hideTen){
+      hideTen.remove();
+      const sevenHour = JSON.parse(localStorage.getItem('sevenHour'));
+      this.setState({sevenHourForecast: sevenHour});
+      const mainPage = document.querySelector('.forecastSection');
+      let newDiv = document.createElement('div')
+      newDiv.innerHTML = '<div className="TenDayForecast"><div>';
+      mainPage.append(newDiv)
+
+    }
+  }
+
+  showTenDay() {
+    const hideSeven = document.querySelector('.SevenHourForecast');
+    if(hideSeven){
+      hideSeven.remove();
+      const tenDay = JSON.parse(localStorage.getItem('tenDay'));
+      this.setState({tenDayForecast: tenDay})
+    }
+  }
+
   render() {
-    if(this.state.sevenHourForecast.length > 0) {
+    if(localStorage.length > 0) {
       console.log('asdfasdf');
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Weatherly</h1>
-        </header>
         <h1>Current Weather</h1>
+        <img className="App-logo" src="https://img.clipart.guru/sun-clipart-transparent-background-weather-clipart-transparent-300_300.png"/>
         <CurrentWeather
           forecast={this.state.currentWeather}/>
-        <h1>10 Day Forecast</h1>
-        <div className="TenDayForecast">
-          <Search getWeather={this.getWeather}/>
-          <TenDayForecast 
-          forecast={this.state.tenDayForecast}/>
+        <div className="midSection">
+          <div className="selectorButtons">
+            <button className="mainbutton" onClick={this.showSevenHour}>7 Hour Forecast</button>
+            <button className="mainbutton" onClick={this.showTenDay}>10 Day Forecast</button>
+          </div>
+          <Search cssSize="smallInput"
+                  getWeather={this.getWeather}/>
         </div>
-        <h1>7 Hour Forecast</h1>
-        <div className="SevenHourForecast">
-          <SevenHourForecast
-          forecast={this.state.sevenHourForecast}/>
+        <div className="forecastSection">
+          <div className="TenDayForecast">
+            <TenDayForecast 
+            forecast={this.state.tenDayForecast}/>
+          </div>
+          <div className="SevenHourForecast">
+            <SevenHourForecast
+            forecast={this.state.sevenHourForecast}/>
+          </div>
         </div>
       </div>
     );
     } else {
       console.log('landing');
       return (
-        <Search getWeather={this.getWeather} />
+        <div className="Landing">
+          <Welcome/>
+          <Search cssSize="largeInput"
+                  getWeather={this.getWeather} />
+        </div>
       )
     }
   }

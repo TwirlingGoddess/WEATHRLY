@@ -10,7 +10,8 @@ describe('Card', function () {
   // execute
   // expect
 
-  beforeEach(() => {
+  it('should return a single element in this component', () => {
     card = new Card();
+    expect(card.length).toBe(1)
   });
 })
