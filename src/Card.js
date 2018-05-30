@@ -7,16 +7,16 @@ const Card = (props) => {
       return (
         <section className='Card'>
         <h1>{props.day}</h1>
-        <h1>Low: {props.low}°</h1>
-        <h1>High: {props.high}°</h1>
+        <h1>Low {props.low}°</h1>
+        <h1>High {props.high}°</h1>
         </section>
       )
     }
     if(props.hour) {
       return (
         <section className='Card'>
-        <h1>Hour: {props.hour}</h1>
-        <h1>Temp: {props.temp}°</h1>
+        <h1>{props.hour}</h1>
+        <h1>{props.temp}°</h1>
         </section>
       )
     } 
