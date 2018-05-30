@@ -9,6 +9,7 @@ describe('App unit tests', () => {
   beforeEach(() => renderedApp = shallow(<App />, { disableLifecycleMethods: true }));
 
   describe('App default state', () => {
+
     test('App has a default state of tenDayForecast', () => {
 
       const expectedState = [];
@@ -38,3 +39,5 @@ describe('App unit tests', () => {
     });
   });
 });
+
+//
