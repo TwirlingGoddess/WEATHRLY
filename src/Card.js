@@ -1,4 +1,5 @@
 import React from 'react';
+import * as FontAwesome from 'react-icons/lib/fa'
 import './Card.css';
 
 
@@ -7,8 +8,9 @@ const Card = (props) => {
       return (
         <section className='Card'>
         <h1>{props.day}</h1>
-        <h2>High {props.high}°</h2>
-        <h3>Low {props.low}°</h3>
+        <FontAwesome.FaBeer />
+        <h2>High: {props.high}°</h2>
+        <h3>Low: {props.low}°</h3>
         </section>
       )
     }
@@ -16,6 +18,8 @@ const Card = (props) => {
       return (
         <section className='Card'>
         <h1>{props.hour}</h1>
+        <i className="far fa-sun"></i>
+        <FontAwesome.FaBeer />
         <h2>{props.temp}°</h2>
         </section>
       )

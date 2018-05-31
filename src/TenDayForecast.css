@@ -1,19 +1,20 @@
 .TenDayForecast {
-  width: 150vw;
+  animation-direction: alternate;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  animation-name: slidein;
   display: flex;
   justify-content: space-between;
-  animation-duration: 20s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
+  width: 150vw;
 }
 
 @keyframes slidein {
   from {
-    margin-left: 70%;
+    margin-left: 5%;
     width: 100%; 
   }
   to {
-    margin-left: -60%;
+    margin-left: -160%;
     width: 100%;
   }
 }

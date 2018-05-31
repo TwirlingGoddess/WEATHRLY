@@ -63,27 +63,71 @@ class App extends Component {
       .then(data => this.setLocalStorage())
       .catch(err => alert("please enter valid city and state"))
   }
+  
+  switchImage() {
+    if(this.state.currentWeather.conditions === 'Mostly Cloudy') {
+      return 'http://pluspng.com/img-png/png-sun-and-clouds-big-image-png-2282.png'
+    }
+    if(this.state.currentWeather.conditions === 'Partly Cloudy') {
+      return 'http://pluspng.com/img-png/png-sun-and-clouds-big-image-png-2282.png'
+    }
+    if(this.state.currentWeather.conditions === 'Overcast') {
+      return 'http://pluspng.com/img-png/png-sun-and-clouds-big-image-png-2282.png'
+    }
+    if(this.state.currentWeather.conditions === 'Sunny') {
+      return 'http://hedwig.cz/wp-content/uploads/2014/07/slunicko.png'
+    }
+    if(this.state.currentWeather.conditions === 'Clear') {
+      return 'http://hedwig.cz/wp-content/uploads/2014/07/slunicko.png'
+    }
+    if(this.state.currentWeather.conditions === 'Chance of Rain') {
+      return 'https://cdn.pixabay.com/photo/2014/03/25/16/26/cloud-297112_1280.png'
+    }
+    if(this.state.currentWeather.conditions === 'Rain') {
+      return 'http://moziru.com/images/umbrella-clipart-rainy-day-10.png'
+    }
+    if(this.state.currentWeather.conditions === 'Snow') {
+      return 'https://www.rutherfordlibrary.org/wp/wp-content/uploads/2017/02/snowday.png'
+    }
+    if(this.state.currentWeather.conditions === 'Storms') {
+      return 'https://banner2.kisspng.com/20171210/c1f/thunder-rain-sky-5a2db61fc8ec62.179498601512945183823.jpg'
+    }            
+  }
+
+  switchStyling() {
+    if(this.state.currentWeather.conditions === 'Sunny') {
+      return 'sunny-stylez'
+    } else if(this.state.currentWeather.conditions === 'Clear') {
+      return 'sunny-stylez'
+    } else {
+      return 'other-stylez'
+    }
+  }
 
   render() {
     if(localStorage.length > 0) {
     return (
       <div className="App">
         <h1>Current Weather</h1>
-        <img className="App-logo" src="https://img.clipart.guru/sun-clipart-transparent-background-weather-clipart-transparent-300_300.png"/>
+        <img className={this.switchStyling()} src={this.switchImage()} alt="icon"/>
         <CurrentWeather forecast={this.state.currentWeather}/>
         <div className="midSection">
           <div className="selectorButtons">
-            <button className="mainbutton">7 Hour Forecast</button>
-            <button className="mainbutton">10 Day Forecast</button>
+            <button onClick={this.toggleCarousel} value='7'>7 Hour Forecast</button>
+            <button onClick={this.toggleCarousel} value='10'>10 Day Forecast</button>
           </div>
           <Search cssSize="smallInput" getWeather={this.getWeather}/>
         </div>
         <div className="forecastSection">
-          <div className="TenDayForecast">
-            <TenDayForecast forecast={this.state.tenDayForecast}/>
-          </div>
           <div className="SevenHourForecast">
             <SevenHourForecast forecast={this.state.sevenHourForecast}/>
+            <SevenHourForecast forecast={this.state.sevenHourForecast}/>
+            <SevenHourForecast forecast={this.state.sevenHourForecast}/>
+            <SevenHourForecast forecast={this.state.sevenHourForecast}/>
+          </div>
+          <div className="TenDayForecast">
+            <TenDayForecast forecast={this.state.tenDayForecast}/>
+            <TenDayForecast forecast={this.state.tenDayForecast}/>
           </div>
         </div>
       </div>
@@ -92,7 +136,7 @@ class App extends Component {
       return (
         <div className="Landing">
           <Welcome />
-          <Search getWeather={this.getWeather} />
+          <Search cssSize="largeInput" getWeather={this.getWeather} />
         </div>
       )
     }

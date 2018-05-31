@@ -5,11 +5,39 @@
   color: white;
 }
 
-.App-logo {
+.sunny-stylez {
   position: absolute;
   margin: -8rem 0 0 -42rem ;
   animation: App-logo-spin infinite 20s linear;
+  animation-name: sunny-stylez-spin;
 }
+
+@keyframes sunny-stylez-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.other-stylez {
+  height: 10rem;
+  position: absolute;
+  margin: -4rem 0 0 -42rem ;
+  animation-duration: 15s;
+  animation-name: cloudy-stylez-slide;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes cloudy-stylez-slide {
+  from {
+    margin-left: -60%;
+    width: 35%; 
+  }
+  to {
+    margin-left: -50%;
+    width: 35%;
+  }
+}
+
 
 h1 {
   margin: 0;
@@ -41,15 +69,15 @@ h1 {
 }
 
 .Landing {
-  height: 100vh;
-  text-align: center;
-  background-image: url("https://i.gzn.jp/img/2017/03/29/deep-photo-style-transfer/s08.jpg");
+  align-items: center;
+  background-image: url("http://www.tokkoro.com/picsup/3015603-background_beautiful_black_clouds_color_colored_dark_dramatic_dream_glow_horizon_landscape_light_natural_nature_orange_ray_red_silhouette_sky_sun_sunrise_sunset_tree_yellow.jpg");
   background-size: cover;
   color: white;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .midSection {
@@ -57,13 +85,13 @@ h1 {
   justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .forecastSection {
   background: linear-gradient(to right, transparent, mistyrose);
   background-image: url("background.png");
   background-size: cover;
+}
+
+
+.SevenDayForecast {
+  height: 0;
 }

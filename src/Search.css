@@ -1,80 +1,80 @@
 .largeInput {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
 }
 
 .smallInput {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
   width: 25%;
 }
 
 .largeInput input{
-  font-size: larger;
-  font-weight: bold;
-  color: slategrey;
-  text-align: center;
-  width: 50%;
-  height: 3rem;
-  border: .001rem solid blue;
-  border-radius: 9rem;
   -moz-border-radius: 9rem; 
   -webkit-border-radius: 9rem;
-  text-decoration-color: blue;
+  background: radial-gradient(beige 65%, orange);
+  border-radius: 9rem;
+  border: .001rem solid blue;
+  color: slategrey;
   cursor: pointer;  
-  background: radial-gradient(powderblue 65%, red);
+  font-size: larger;
+  font-weight: bold;
+  height: 3rem;
   margin: 1rem 0;
+  text-align: center;
+  text-decoration-color: blue;
+  width: 50%;
 }
 
 .largeInput button {
-  font-size: large;
-  font-weight: bold;
-  color: purple;
-  width: 30%;
-  height: 2rem;
-  border: .001rem solid blue;
-  border-radius: 9rem;
-  -moz-border-radius: 9rem; 
+    -moz-border-radius: 9rem; 
   -webkit-border-radius: 9rem;
+  backg
+  border-radius: 9rem;
+  border: .001rem solid blue;
+  color: purple;
   cursor: pointer;
-  background: radial-gradient(powderblue 65%, red);
+  font-weight: bold;
+  height: 2rem;
+  width: 30%;
+font-size: large;round: radial-gradient(beige 65%, orange);
 }
 
 .largeInput button:hover {
-  background: radial-gradient(powderblue 45%, orange);
+  background: radial-gradient(beige 45%, green);
 }
 
 .smallInput input{
-  font-size: .75rem;
-  color: purple;
-  text-align: center;
-  width: 77.5%;
-  height: 2.5rem;
-  float: right;
-  border: .001rem solid blue;
-  border-radius: 9rem;
   -moz-border-radius: 9rem; 
   -webkit-border-radius: 9rem;
-  cursor: pointer;
   background: radial-gradient(#fcffbf 40%, orange);
+  border-radius: 9rem;
+  border: .001rem solid blue;
+  color: purple;
+  cursor: pointer;
+  float: right;
+  font-size: .75rem;
+  height: 2.5rem;
+  text-align: center;
+  width: 77.5%;
 }
 
 .smallInput button {
-  font-size: .80rem;
-  font-weight: bold;
-  color: purple;
-  width: 16%;
-  height: 3rem;
-  border: .001rem solid blue;
-  border-radius: 9rem;
-  -moz-border-radius: 9rem; 
+    -moz-border-radius: 9rem; 
   -webkit-border-radius: 9rem;
+  bac
+  border-radius: 9rem;
+  border: .001rem solid blue;
+  color: purple;
   cursor: pointer;
-  background: radial-gradient(#fcffbf 40%, orange);
+  font-weight: bold;
+  height: 3rem;
+  width: 16%;
+font-size: .80rem;kground: radial-gradient(#fcffbf 40%, orange);
 }
 
 .smallInput button:hover {

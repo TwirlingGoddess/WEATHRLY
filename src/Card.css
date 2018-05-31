@@ -1,12 +1,13 @@
 .Card {
-  display: inline;
+  align-items: center;
+  border-radius: 9000rem;
+  box-shadow: .5rem .5rem 2rem lightpink; 
   display: flex;
+  display: inline;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  box-shadow: .5rem .5rem 2rem lightpink; 
   margin: 2rem;
-  border-radius: 9000rem
+  width: 8rem;
 }
 
 .Card:hover {
