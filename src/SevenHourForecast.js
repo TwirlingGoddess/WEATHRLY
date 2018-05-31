@@ -7,13 +7,14 @@ const SevenHourForecast = (props) => {
       return(
         <Card
         hour={hour.hour}
+        img={hour.image}
         temp={hour.temp}
         key={index}
       />)
     })
 
     return (
-      <div>
+      <div className="justify-seven-day">
         { renderedCards }
       </div>
     )

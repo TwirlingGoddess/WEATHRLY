@@ -5,6 +5,7 @@ const tenDayDataCleaner = (data) => {
     tenDayArray.push({
       
       dayOfWeek: forecast.date.weekday,
+      image: forecast.icon_url,
       high: forecast.high.fahrenheit ,
       low: forecast.low.fahrenheit
     })

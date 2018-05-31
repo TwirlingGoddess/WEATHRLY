@@ -69,13 +69,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Current Weather</h1>
-        <img className="App-logo" src="https://img.clipart.guru/sun-clipart-transparent-background-weather-clipart-transparent-300_300.png"/>
         <CurrentWeather forecast={this.state.currentWeather}/>
         <div className="midSection">
-          <div className="selectorButtons">
-            <button className="mainbutton">7 Hour Forecast</button>
-            <button className="mainbutton">10 Day Forecast</button>
-          </div>
           <Search cssSize="smallInput" getWeather={this.getWeather}/>
         </div>
         <div className="forecastSection">

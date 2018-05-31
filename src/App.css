@@ -5,46 +5,17 @@
   color: white;
 }
 
-.App-logo {
-  position: absolute;
-  margin: -8rem 0 0 -42rem ;
-  animation: App-logo-spin infinite 20s linear;
-}
-
 h1 {
   margin: 0;
 }
 
-.selectorButtons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 3rem;
-  width: 10rem;
-}
-
-.selectorButtons button {
-  font-weight: bold;
-  width: 40%;
-  color: purple;
-  height: 3rem;
-  border: .001rem solid blue;
-  border-radius: 9rem;
-  -moz-border-radius: 9rem; 
-  -webkit-border-radius: 9rem;
-  cursor: pointer;  
-  background: radial-gradient(#fcffbf 40%, orange);
-}
-
-.selectorButtons button:hover {
-  background-color: orange
+input {
+  width: 15vw;
 }
 
 .Landing {
   height: 100vh;
   text-align: center;
-  background-image: url("https://i.gzn.jp/img/2017/03/29/deep-photo-style-transfer/s08.jpg");
-  background-size: cover;
   color: white;
   display: flex;
   flex-direction: column;
@@ -54,16 +25,6 @@ h1 {
 
 .midSection {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.forecastSection {
-  background: linear-gradient(to right, transparent, mistyrose);
-  background-image: url("background.png");
-  background-size: cover;
-}

@@ -4,14 +4,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-shadow: .5rem .5rem 2rem lightpink; 
-  margin: 2rem;
-  border-radius: 9000rem
+
 }
 
-.Card:hover {
-  box-shadow: .5rem .5rem 2rem chartreuse; 
-}
 
 .Card img {
   width: 100%;

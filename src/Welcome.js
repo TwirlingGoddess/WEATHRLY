@@ -6,8 +6,7 @@ const Welcome = () => {
 
     return(
       <div className = "Welcome">
-        <h1> Welcome to WeathRly </h1>
-        <h2> ....where the weather is </h2>
+        <h1> Weathrly </h1>
       </div>      
     )
 }

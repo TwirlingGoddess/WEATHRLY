@@ -2,19 +2,11 @@
   display: flex;
   align-content: center;
   justify-content: space-between;  
-  animation-duration: 20s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 90%;
-    width: 100%; 
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-
+.justify-seven-day {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  margin-top: 50px;
 }

@@ -7,6 +7,7 @@ const TenDayForecast = (props) => {
       return(
         <Card 
           day={day.dayOfWeek}
+          img={day.image}
           high={day.high}
           low={day.low}
           key={index}
@@ -14,7 +15,7 @@ const TenDayForecast = (props) => {
     })
 
     return(
-      <div>
+      <div className="justify-ten-day">
         { renderedCards }
       </div>
     )

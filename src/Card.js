@@ -8,6 +8,7 @@ const Card = (props) => {
       return (
         <section className='Card'>
         <h1>{props.day}</h1>
+        <img src= {props.img}/>
         <h2>High {props.high}°</h2>
         <h3>Low {props.low}°</h3>
         </section>
@@ -17,6 +18,7 @@ const Card = (props) => {
       return (
         <section className='Card'>
         <h1>{props.hour}</h1>
+        <img src= {props.img} />
         <h2>{props.temp}°</h2>
         </section>
       )
