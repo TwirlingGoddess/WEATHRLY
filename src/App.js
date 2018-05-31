@@ -89,7 +89,7 @@ class App extends Component {
     if(this.state.currentWeather.conditions === 'Snow') {
       return 'https://www.rutherfordlibrary.org/wp/wp-content/uploads/2017/02/snowday.png'
     }
-    if(this.state.currentWeather.conditions === 'Storms') {
+    if(this.state.currentWeather.conditions === 'Thunderstorm') {
       return 'https://banner2.kisspng.com/20171210/c1f/thunder-rain-sky-5a2db61fc8ec62.179498601512945183823.jpg'
     }            
   }

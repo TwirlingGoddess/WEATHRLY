@@ -61,7 +61,7 @@ h1 {
   -moz-border-radius: 9rem; 
   -webkit-border-radius: 9rem;
   cursor: pointer;  
-  background: radial-gradient(#fcffbf 40%, orange);
+  background: radial-gradient(beige 40%, orange);
 }
 
 .selectorButtons button:hover {
@@ -70,7 +70,7 @@ h1 {
 
 .Landing {
   align-items: center;
-  background-image: url("http://www.tokkoro.com/picsup/3015603-background_beautiful_black_clouds_color_colored_dark_dramatic_dream_glow_horizon_landscape_light_natural_nature_orange_ray_red_silhouette_sky_sun_sunrise_sunset_tree_yellow.jpg");
+  background-image: url("http://aeterquest.com/wp-content/uploads/2016/08/rays-of-setting-sun-shining-through-clouds.jpg");
   background-size: cover;
   color: white;
   display: flex;
@@ -89,9 +89,4 @@ h1 {
   background: linear-gradient(to right, transparent, mistyrose);
   background-image: url("background.png");
   background-size: cover;
-}
-
-
-.SevenDayForecast {
-  height: 0;
 }

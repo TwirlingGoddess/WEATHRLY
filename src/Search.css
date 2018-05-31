@@ -14,67 +14,67 @@
 }
 
 .largeInput input{
-  -moz-border-radius: 9rem; 
-  -webkit-border-radius: 9rem;
-  background: radial-gradient(beige 65%, orange);
-  border-radius: 9rem;
-  border: .001rem solid blue;
-  color: slategrey;
-  cursor: pointer;  
   font-size: larger;
   font-weight: bold;
-  height: 3rem;
-  margin: 1rem 0;
+  color: brown;
   text-align: center;
-  text-decoration-color: blue;
   width: 50%;
+  height: 3rem;
+  border: .001rem solid blue;
+  border-radius: 9rem;
+  -moz-border-radius: 9rem; 
+  -webkit-border-radius: 9rem;
+  text-decoration-color: blue;
+  cursor: pointer;  
+  background: radial-gradient(beige 65%, orange);
+  margin: 1rem 0;
 }
 
 .largeInput button {
-    -moz-border-radius: 9rem; 
-  -webkit-border-radius: 9rem;
-  backg
-  border-radius: 9rem;
-  border: .001rem solid blue;
-  color: purple;
-  cursor: pointer;
+  font-size: large;
   font-weight: bold;
-  height: 2rem;
+  color: brown;
   width: 30%;
-font-size: large;round: radial-gradient(beige 65%, orange);
+  height: 2rem;
+  border: .001rem solid blue;
+  border-radius: 9rem;
+  -moz-border-radius: 9rem; 
+  -webkit-border-radius: 9rem;
+  cursor: pointer;
+  background: radial-gradient(beige 65%, orange);
 }
 
 .largeInput button:hover {
-  background: radial-gradient(beige 45%, green);
+  background: radial-gradient(beige 45%, purple);
 }
 
 .smallInput input{
-  -moz-border-radius: 9rem; 
-  -webkit-border-radius: 9rem;
-  background: radial-gradient(#fcffbf 40%, orange);
-  border-radius: 9rem;
-  border: .001rem solid blue;
-  color: purple;
-  cursor: pointer;
-  float: right;
   font-size: .75rem;
-  height: 2.5rem;
+  color: brown;
   text-align: center;
   width: 77.5%;
+  height: 2.5rem;
+  float: right;
+  border: .001rem solid blue;
+  border-radius: 9rem;
+  -moz-border-radius: 9rem; 
+  -webkit-border-radius: 9rem;
+  cursor: pointer;
+  background: radial-gradient(#fcffbf 40%, orange);
 }
 
 .smallInput button {
-    -moz-border-radius: 9rem; 
-  -webkit-border-radius: 9rem;
-  bac
-  border-radius: 9rem;
-  border: .001rem solid blue;
-  color: purple;
-  cursor: pointer;
+  font-size: .80rem;
   font-weight: bold;
-  height: 3rem;
+  color: brown;
   width: 16%;
-font-size: .80rem;kground: radial-gradient(#fcffbf 40%, orange);
+  height: 3rem;
+  border: .001rem solid blue;
+  border-radius: 9rem;
+  -moz-border-radius: 9rem; 
+  -webkit-border-radius: 9rem;
+  cursor: pointer;
+  background: radial-gradient(#fcffbf 40%, orange);
 }
 
 .smallInput button:hover {
