@@ -2,18 +2,19 @@
   width: 150vw;
   display: flex;
   justify-content: space-between;
-  animation-duration: 20s;
+  animation-duration: 45s;
   animation-name: slidein;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 @keyframes slidein {
   from {
-    margin-left: 70%;
+    margin-left: 5%;
     width: 100%; 
   }
   to {
-    margin-left: -60%;
+    margin-left: -160%;
     width: 100%;
   }
 }

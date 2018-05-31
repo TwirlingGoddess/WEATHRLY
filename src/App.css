@@ -5,11 +5,39 @@
   color: white;
 }
 
-.App-logo {
+.sunny-stylez {
   position: absolute;
   margin: -8rem 0 0 -42rem ;
   animation: App-logo-spin infinite 20s linear;
+  animation-name: sunny-stylez-spin;
 }
+
+@keyframes sunny-stylez-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.other-stylez {
+  height: 10rem;
+  position: absolute;
+  margin: -4rem 0 0 -42rem ;
+  animation-duration: 15s;
+  animation-name: cloudy-stylez-slide;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes cloudy-stylez-slide {
+  from {
+    margin-left: -60%;
+    width: 35%; 
+  }
+  to {
+    margin-left: -50%;
+    width: 35%;
+  }
+}
+
 
 h1 {
   margin: 0;
@@ -33,7 +61,7 @@ h1 {
   -moz-border-radius: 9rem; 
   -webkit-border-radius: 9rem;
   cursor: pointer;  
-  background: radial-gradient(#fcffbf 40%, orange);
+  background: radial-gradient(beige 40%, orange);
 }
 
 .selectorButtons button:hover {
@@ -41,25 +69,20 @@ h1 {
 }
 
 .Landing {
-  height: 100vh;
-  text-align: center;
-  background-image: url("https://i.gzn.jp/img/2017/03/29/deep-photo-style-transfer/s08.jpg");
+  align-items: center;
+  background-image: url("http://aeterquest.com/wp-content/uploads/2016/08/rays-of-setting-sun-shining-through-clouds.jpg");
   background-size: cover;
   color: white;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .midSection {
   display: flex;
   justify-content: space-between;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 .forecastSection {
