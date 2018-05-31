@@ -14,7 +14,7 @@ describe('App unit tests', () => {
 
       const expectedState = [];
       const actualState = renderedApp.state('tenDayForecast');
-      
+
       expect(actualState).toEqual(expectedState);
     });
   });
@@ -39,5 +39,3 @@ describe('App unit tests', () => {
     });
   });
 });
-
-//

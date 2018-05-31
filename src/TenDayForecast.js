@@ -3,8 +3,7 @@ import Card from './Card.js';
 import './TenDayForecast.css';
 
 const TenDayForecast = (props) => {
-  return (
-    props.forecast.map((day, index) => {
+   const renderedCards =  props.forecast.map((day, index) => {
       return(
         <section className={props.switch}>
           <Card 
@@ -14,7 +13,12 @@ const TenDayForecast = (props) => {
             key={index}/>
         </section>)
     })
-  )
+
+    return(
+      <div>
+        { renderedCards }
+      </div>
+    )
 }
 
 
