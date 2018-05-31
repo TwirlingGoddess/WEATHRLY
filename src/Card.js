@@ -4,12 +4,12 @@ import './Card.css';
 
 
 const Card = (props) => {
-  
-    if (props.day) {
+    if(props.day) {
+
       return (
         <section className='Card'>
         <h1>{props.day}</h1>
-        <FontAwesome.FaBeer />
+        <FontAwesome.FaCloud className="icon"/>
         <h2>High: {props.high}°</h2>
         <h3>Low: {props.low}°</h3>
         </section>
@@ -19,7 +19,7 @@ const Card = (props) => {
       return (
         <section className='Card'>
         <h1>{props.hour}</h1>
-        <FontAwesome.FaBeer />
+        <FontAwesome.FaCloud className="icon"/>
         <h2>{props.temp}°</h2>
         </section>
       )
