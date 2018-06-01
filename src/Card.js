@@ -4,8 +4,8 @@ import './Card.css';
 
 
 const Card = (props) => {
-  
-    if (props.day) {
+    if(props.day) {
+
       return (
         <section className='Card'>
         <h1>{props.day}</h1>
