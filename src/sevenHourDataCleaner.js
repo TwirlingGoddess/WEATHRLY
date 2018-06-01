@@ -5,6 +5,7 @@ const sevenHourDataCleaner = (data) => {
   data.hourly_forecast.splice(1,7).forEach(forecast => {
     sevenHourDataArray.push({
       hour: forecast.FCTTIME.civil,
+      image: forecast.icon_url,
       temp: forecast.temp.english
     })
   })

@@ -5,17 +5,17 @@ import './TenDayForecast.css';
 const TenDayForecast = (props) => {
    const renderedCards =  props.forecast.map((day, index) => {
       return(
-        <section className={props.switch}>
-          <Card 
-            day={day.dayOfWeek}
-            high={day.high}
-            low={day.low}
-            key={index}/>
-        </section>)
+        <Card 
+          day={day.dayOfWeek}
+          img={day.image}
+          high={day.high}
+          low={day.low}
+          key={index}
+        />)
     })
 
     return(
-      <div>
+      <div className="justify-ten-day">
         { renderedCards }
       </div>
     )

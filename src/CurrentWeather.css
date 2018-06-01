@@ -1,3 +1,7 @@
 .CurrentWeather {
   margin: .5rem 0;
 }
+
+.current, .day, .conditions, .high, .low {
+font-size: 25px;
+}

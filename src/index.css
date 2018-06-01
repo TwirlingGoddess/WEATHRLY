@@ -3,6 +3,6 @@ body {
   font-family: 'railway', sans-serif;
   margin: 0;
   padding: 0;
-  text-shadow: .25rem .25rem .25rem brown; 
-  font-color: #DEFBC2;
+  font-family: 'railway', sans-serif;
+  background-color: powderblue;
 }

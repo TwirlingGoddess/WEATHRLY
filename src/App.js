@@ -109,13 +109,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Current Weather</h1>
-        <img className={this.switchStyling()} src={this.switchImage()} alt="icon"/>
         <CurrentWeather forecast={this.state.currentWeather}/>
         <div className="midSection">
-          <div className="selectorButtons">
-            <button onClick={this.toggleCarousel} value='7'>7 Hour Forecast</button>
-            <button onClick={this.toggleCarousel} value='10'>10 Day Forecast</button>
-          </div>
           <Search cssSize="smallInput" getWeather={this.getWeather}/>
         </div>
         <div className="forecastSection">

@@ -1,21 +1,11 @@
 .SevenHourForecast {
   align-content: center;
-  animation-direction: alternate;
-  animation-duration: 45s;
-  animation-iteration-count: infinite;
-  animation-name: slidein;
-  display: flex;
   justify-content: space-between;  
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 5%;
-    width: 100%; 
-  }
-  to {
-    margin-left: --160%;
-    width: 100%;
-  }
-
+.justify-seven-day {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  margin-top: 50px;
 }

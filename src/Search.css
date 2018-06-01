@@ -20,13 +20,8 @@
   text-align: center;
   width: 50%;
   height: 3rem;
-  border: .001rem solid blue;
-  border-radius: 9rem;
-  -moz-border-radius: 9rem; 
-  -webkit-border-radius: 9rem;
   text-decoration-color: blue;
   cursor: pointer;  
-  background: radial-gradient(beige 65%, orange);
   margin: 1rem 0;
 }
 
@@ -36,16 +31,6 @@
   color: brown;
   width: 30%;
   height: 2rem;
-  border: .001rem solid blue;
-  border-radius: 9rem;
-  -moz-border-radius: 9rem; 
-  -webkit-border-radius: 9rem;
-  cursor: pointer;
-  background: radial-gradient(beige 65%, orange);
-}
-
-.largeInput button:hover {
-  background: radial-gradient(beige 45%, purple);
 }
 
 .smallInput input{
@@ -55,12 +40,7 @@
   width: 77.5%;
   height: 2.5rem;
   float: right;
-  border: .001rem solid blue;
-  border-radius: 9rem;
-  -moz-border-radius: 9rem; 
-  -webkit-border-radius: 9rem;
   cursor: pointer;
-  background: radial-gradient(#fcffbf 40%, orange);
 }
 
 .smallInput button {
@@ -69,14 +49,5 @@
   color: brown;
   width: 16%;
   height: 3rem;
-  border: .001rem solid blue;
-  border-radius: 9rem;
-  -moz-border-radius: 9rem; 
-  -webkit-border-radius: 9rem;
   cursor: pointer;
-  background: radial-gradient(#fcffbf 40%, orange);
-}
-
-.smallInput button:hover {
-  background-color: orange
 }
