@@ -16,12 +16,6 @@ input {
 .Landing {
   height: 100vh;
   text-align: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .midSection {
   display: flex;

@@ -1,12 +1,11 @@
 .Card {
+  width: 7rem;
   display: inline;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
 }
-
 
 .Card img {
   width: 100%;

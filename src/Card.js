@@ -1,3 +1,4 @@
+import * as FontAwesome from 'react-icons/lib/fa'
 import React from 'react';
 import './Card.css';
 
