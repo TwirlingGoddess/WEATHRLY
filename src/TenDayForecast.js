@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card.js';
-import './TenDayForecast.css';
 
 const TenDayForecast = (props) => {
    const renderedCards =  props.forecast.map((day, index) => {
