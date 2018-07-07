@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Trie from '@TwirlingGoddess/Complete-Me'
-import locationData from './locationData.js'
+// import Trie from '@TwirlingGoddess/Complete-Me'
+// import locationData from './locationData.js'
 import './Search.css';
 
-const localTrie = new Trie();
-localTrie.populate(locationData)
+// const localTrie = new Trie();
+// localTrie.populate(locationData)
 
 class Search extends Component {
   constructor(props) {

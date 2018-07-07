@@ -116,12 +116,8 @@ class App extends Component {
         <div className="forecastSection">
           <div className="SevenHourForecast">
             <SevenHourForecast forecast={this.state.sevenHourForecast}/>
-            <SevenHourForecast forecast={this.state.sevenHourForecast}/>
-            <SevenHourForecast forecast={this.state.sevenHourForecast}/>
-            <SevenHourForecast forecast={this.state.sevenHourForecast}/>
           </div>
           <div className="TenDayForecast">
-            <TenDayForecast forecast={this.state.tenDayForecast}/>
             <TenDayForecast forecast={this.state.tenDayForecast}/>
           </div>
         </div>
